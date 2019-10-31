@@ -3,7 +3,6 @@
 ```typescript
 
 // Logic
-
 export class BudgetService {
     constructor(private calc: Calc) { }
     calcBudget(year: number) { ... }
@@ -13,7 +12,6 @@ export class BudgetService {
 config({ provide: Calc, useClass: FastCalc });
 
 // Execution
-
 injectedBudgetService.calcBudget(2020);
 
 ```
@@ -28,12 +26,10 @@ const calcBudgetWithCalc = (calc: Calc) => (year: number) => {
 }
 
 // Config
-
 export const ourCalc = fastCalc;
 export const calcBudget = calcBudgetWithCalc(ourCalc);
 
 // Execution
-
 calcBudget(2020)
 
 ```
